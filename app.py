@@ -27,7 +27,7 @@ with open('saq.json', 'r') as f:
     saq_data = json.load(f)
 
 # Set OpenAI API key
-openai.api_key = 'sk-proj-aALC04wW1sKtyvt0Vo5nT3BlbkFJgcsajCcl7D3shiAkJ1ms'  # Replace with your actual OpenAI API key
+openai.api_key = 'your-api-key'  # Replace with your actual OpenAI API key
 
 # Initialize session state and cache
 if 'history' not in st.session_state:
