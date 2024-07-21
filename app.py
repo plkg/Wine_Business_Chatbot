@@ -91,11 +91,7 @@ if user_input:
             st.session_state['context'] += f"Bot: {retrieved_answer}\n"
             answer = generate_response(st.session_state['history'], retrieved_answer)
         else:
-            # Generate response based on history context
-            question_with_context = f"{st.session_state['context']}User: {user_input}"
-            answer = generate_response(st.session_state['history'], question_with_context)
-            if not answer:
-                answer = "Please contact the business directly for this information."
+            answer = "Please contact the business directly for this information."
     
     st.session_state['history'].append({"role": "bot", "content": answer})
     st.session_state['context'] += f"Bot: {answer}\n"
